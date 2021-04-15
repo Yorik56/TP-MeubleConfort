@@ -32,3 +32,10 @@ export default {
 
 }
 </script>
+
+<style >
+.card{
+  margin-bottom: 20px;
+}
+
+</style>

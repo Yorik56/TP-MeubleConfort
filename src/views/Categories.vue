@@ -9,7 +9,9 @@
 <script>
 import json from '../assets/data.json'
 export default {
+props: this.myJson,
 name: "Categories",
+myJson: json,
   data(){
     return{
       myJson: json
@@ -18,6 +20,8 @@ name: "Categories",
 }
 </script>
 
-<style scoped>
-
+<style >
+  .card{
+    margin-bottom: 20px;
+  }
 </style>

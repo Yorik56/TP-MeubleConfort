@@ -33,18 +33,60 @@
             <b-dropdown-item href="#">Profile</b-dropdown-item>
             <b-dropdown-item href="#">Sign Out</b-dropdown-item>
           </b-nav-item-dropdown>
+          <button class="btn iconCart" type="button" @click="showModalPanier">
+            <img src="../assets/shopping-cart.png">
+          </button>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+    <panier v-show="isModalPanierVisible" @close="closeModalPanier" />
+    <panier v-show="isModalPaiementVisible" @open="showModalPaiement" />
+    <paiement v-show="isModalPaiementVisible" @close="closeModalPaiement" />
   </div>
 </template>
 
 <script>
+
+import panier from './Panier';
+import paiement from './Paiement';
+
 export default {
-name: "navbar"
-}
+  name: 'navbar',
+  components: {
+    panier,
+    paiement,
+  },
+  data() {
+    return {
+      isModalPanierVisible: false,
+      isModalPaiementVisible: false,
+    };
+  },
+  methods: {
+    showModalPanier() {
+      this.isModalPanierVisible = true;
+    },
+    closeModalPanier(num) {
+      if(num == 1){
+        this.isModalPanierVisible = false;
+      } else {
+        this.isModalPanierVisible = false;
+        this.isModalPaiementVisible = true;
+
+      }
+    },
+    showModalPaiement() {
+      this.isModalPaiementVisible = true;
+    },
+    closeModalPaiement() {
+      this.isModalPaiementVisible = false;
+    },
+  }
+};
 </script>
 
 <style scoped>
-
+  .iconCart > img{
+    width: 25px;
+  }
 </style>

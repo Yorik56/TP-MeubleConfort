@@ -27,7 +27,23 @@ const routes = [
     path: '/sous_categorie/:idC',
     name: 'sous_categorie',
     component: () => import(/* webpackChunkName: "about" */ '../views/Sous_categories.vue')
-  }
+  },
+  {
+    path: '/produits/:idC/:idProducts',
+    name: 'produits',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Produits.vue')
+  },
+  {
+    path: '/produit/:idC/:idProducts/:idProduct',
+    name: 'produit',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Produit_Fiche.vue')
+  },
+  {
+    path: '/panier',
+    name: 'panier',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Panier.vue')
+  },
+
 ]
 
 const router = new VueRouter({

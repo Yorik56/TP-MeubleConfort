@@ -1,0 +1,303 @@
+[
+  {
+    "id": 1,
+    "titre": "Chambre",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Lit",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Lit en chêne"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "titre": "Têtes de lit",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Tête de lit carrée, mosaïque"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "titre": "Matelas",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Matelas Latex",
+            "poids": "25kg",
+            "prix": "1500€",
+            "largeur": "120cm",
+            "longueure": "180cm",
+            "hauteur": "80cm",
+            "categorie": "matelas",
+            "matiere": "latex",
+            "design": "carré",
+            "mode_livraison": "non",
+            "reference": "efezez84ffs8",
+            "sous_titre": "matelas latex",
+            "couleur": "blanc",
+            "quantite": "1",
+            "image": "",
+            "tva": "20%"
+          },
+          {
+            "id": 2,
+            "titre": "Matelas à ressort"
+          },
+          {
+            "id": 3,
+            "titre": "Matelas mousse"
+          },
+          {
+            "id": 4,
+            "titre": "Matelas à mémoire de forme"
+          },
+          {
+            "id": 5,
+            "titre": "Matelas relaxation"
+          },
+          {
+            "id": 6,
+            "titre": "Matelas BZ, clic clac"
+          },
+          {
+            "id": 7,
+            "titre": "Matelas enfant"
+          },
+          {
+            "id": 8,
+            "titre": "Matelas bébé"
+          },
+          {
+            "id": 9,
+            "titre": "Matelas gonflable"
+          },
+          {
+            "id": 10,
+            "titre": "Matelas Surmatelas"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "titre": "Sommiers",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Sommier tapissier à lattes"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "titre": "Armoire",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Armoire penderie lingère"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "titre": "Dressing",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Armoire dressing d'angle"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "titre": "Commode",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Commode en bois massif"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "titre": "Chiffonier",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Chiffonier bois et métal"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "titre": "Console/Coiffeuse",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Console design ultra tendance"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "titre": "Table de chevet",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Table de chevet en bois massif"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titre": "Salon",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Table basse",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Table basse Scandinave"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "titre": "Bureau",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Bureaux et secrétaires",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Bureau d'angle compact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "titre": "Salle à manger",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Table",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Table salle à anger industrielle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "titre": "Mobilier jardin",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Canape jardin",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Salon de jardin d'angle en rotin vielli"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "titre": "Jardin",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Lanternes et lampes externes",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Applique extérieure style lanterne"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "titre": "Balcon",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Chaise",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Salon détente modulable"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "titre": "Entrée",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Rangement",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Vestiaire murale"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "titre": "Extérieur",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Nain de jardin",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Nain de jardin gentil en polyrésine"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "titre": "Extérieur",
+    "sousCategories": [
+      {
+        "id": 1,
+        "titre": "Caisson/Tiroir cuisine",
+        "produits": [
+          {
+            "id": 1,
+            "titre": "Caisson de cuisine bas"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -206,7 +206,7 @@
   },
   {
     "id": 5,
-    "titre": "Mobilier jardin",
+    "titre": "Mobilier_jardin",
     "sousCategories": [
       {
         "id": 1,
@@ -254,7 +254,7 @@
   },
   {
     "id": 8,
-    "titre": "Entrée",
+    "titre": "Entree",
     "sousCategories": [
       {
         "id": 1,
@@ -270,7 +270,7 @@
   },
   {
     "id": 9,
-    "titre": "Extérieur",
+    "titre": "Exterieur",
     "sousCategories": [
       {
         "id": 1,
@@ -286,7 +286,7 @@
   },
   {
     "id": 10,
-    "titre": "Extérieur",
+    "titre": "Salle_a_manger",
     "sousCategories": [
       {
         "id": 1,

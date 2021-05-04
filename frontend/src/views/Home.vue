@@ -4,15 +4,11 @@
     <div class="container">
       <div class="row">
         <div class="col-3" v-for="data in categories"  :key="data.id">
-            <div class="card">
-<!--            <img class="card-img-top" src="..." alt="Card image cap">-->
-            <div class="card-body">
-              <h5 class="card-title">{{data.titre}}</h5>
-<!--              <img  class="imgProduct" :src="require(`../assets/Categories/${data.titreSysteme}/Cat_${data.titreSysteme}.jpg`)" :alt="data.titre">-->
-<!--              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-<!--              <router-link class="btn btn-primary" :to="{ name: 'sous_categorie', params: { idC: data.id }}">Aller voir </router-link>-->
-            </div>
-          </div>
+          <card
+              :titre = "data.titre"
+              :url   = "data.titre_systeme + '/Cat_' + data.ImageCategorie"
+              :link="{ name: 'sous_categorie', params: { idC: data.id }}"
+          />
         </div>
       </div>
     </div>
@@ -21,9 +17,9 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-import json from "@/assets/data.json"
-import Categorie_service from "@/services/Categorie_service";
+import json from "../assets/data.json"
+import Categorie_service from "../services/Categorie_service";
+import card from "../components/Card"
 
 
 export default {
@@ -35,22 +31,25 @@ export default {
 
     }
   },
-  async mounted () {
+  async mounted() {
+    Categorie_service.getAll()
+        .then((response) => {
+          console.log(response)
+          this.categories = response
+        })
+        .catch((error) => {
+          this.loading = false
+          console.log(error.response)
+        })
 
-    Categorie_service.getAll().then((res)=>{
-      console.log('toto');
-      if(res) {
-        this.categories = res;
-      }
-    })
-        .catch((err)=> console.log(err));
-  },
-  created(){
-    console.log("hello home")
-  },
 
+
+  },
   methods: {
 
+  },
+  components: {
+    card
   },
 }
 </script>

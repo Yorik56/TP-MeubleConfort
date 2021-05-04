@@ -5,11 +5,11 @@ const connection = mysql.createConnection({
     user: 'root',
     password: '',
     database:'meubles_confort'
-});
+})
 
 connection.connect((err)=> {
-    if (err) throw err;
-    console.log("connecté à la base de données");
-});
+    if (err) throw err
+    console.log("connecté à la base de données")
+})
 
 module.exports = connection;

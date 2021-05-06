@@ -6,7 +6,7 @@
       <p v-if="description" class=" description_categorie card-text">{{ description }}</p>
       <router-link class="btn btn-primary buttonCard" :to="link">Aller voir </router-link>
       <p v-if="prix" class="card-text">{{prix}} €</p>
-      <button v-if="idProductAdd" :click="addProduct(idProductAdd)">  Activer les lasers
+      <button v-if="idProductAdd" class="btn btn-primary buttonCard" :click="addProduct(idProductAdd)">  Acheter
       </button>
     </div>
   </div>

@@ -41,6 +41,18 @@ app.get('/sous_categories/:id', (req, res) => {
     })
 })
 
+// GET NAME CAT By ID Categories
+app.get('/Namecategorie/:id', (req, res) => {
+    const id = req.params.id;
+    database.query('SELECT titre_systeme FROM categorie WHERE id =' + id, (err, result) => {
+        if (err) throw err;
+        const categories = JSON.stringify(result);
+        return res.end(categories, function (err){
+            if (err) throw err;
+        })
+    })
+})
+
 // GET ALL Products By Id SubCategories
 app.get('/all_products/:id', (req, res) => {
     const id = req.params.id;
@@ -56,7 +68,7 @@ app.get('/all_products/:id', (req, res) => {
 // GET ALL Products By Id SubCategories
 app.get('/nomSousCategorie/:id', (req, res) => {
     const id = req.params.id;
-    database.query('SELECT titre FROM sous_categorie WHERE id =' + id , (err, result) => {
+    database.query('SELECT titreSysteme FROM sous_categorie WHERE id =' + id , (err, result) => {
         if (err) throw err;
         const nomSousCategorie = JSON.stringify(result);
         return res.end(nomSousCategorie, function (err){

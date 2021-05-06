@@ -8,6 +8,7 @@
               :titre = "data.titre"
               :url   = "data.titre_systeme + '/Cat_' + data.ImageCategorie"
               :link="{ name: 'sous_categorie', params: { idC: data.id }}"
+              :description="data.Description"
           />
         </div>
       </div>
@@ -17,7 +18,7 @@
 
 <script>
 // @ is an alias to /src
-import json from "../assets/data.json"
+// import json from "../assets/data.json"
 import Categorie_service from "../services/Categorie_service";
 import card from "../components/Card"
 
@@ -26,7 +27,7 @@ export default {
   name: 'Home',
   data(){
     return{
-      myJson: json,
+      // myJson: json,
       categories: '',
 
     }
@@ -55,6 +56,7 @@ export default {
 </script>
 
 <style >
+
 .card{
   margin-bottom: 20px;
 }
@@ -63,5 +65,6 @@ export default {
   width: 100%;
   height: 150px;
 }
+
 
 </style>

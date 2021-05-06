@@ -19,6 +19,13 @@ class Categorie_service {
         return response.data;
     }
 
+    async getNameCategorie(id){
+        let response = await this.axios.get("/Namecategorie/" + id, {
+
+        });
+        return response.data;
+    }
+
     async getAllProducts(id){
         let response = await this.axios.get("/all_products/" + id, {
 
@@ -29,6 +36,13 @@ class Categorie_service {
 
     async getNameSousCategorie(id){
         let response = await this.axios.get("/nomSousCategorie/" + id, {
+
+        });
+        return response.data;
+    }
+
+    async getProduct(id){
+        let response = await this.axios.get("/product/" + id, {
 
         });
         return response.data;

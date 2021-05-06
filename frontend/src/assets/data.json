@@ -12,7 +12,22 @@
         "produits": [
           {
             "id": 1,
-            "titre": "Lit en chêne"
+            "titre": "Matelas Latex",
+            "poids": "25kg",
+            "prix": "1500€",
+            "largeur": "120cm",
+            "longueure": "180cm",
+            "hauteur": "80cm",
+            "categorie": "matelas",
+            "matiere": "latex",
+            "design": "carré",
+            "mode_livraison": "non",
+            "reference": "efezez84ffs8",
+            "sous_titre": "matelas latex",
+            "couleur": "blanc",
+            "quantite": "1",
+            "image": "",
+            "tva": "20%"
           }
         ]
       },

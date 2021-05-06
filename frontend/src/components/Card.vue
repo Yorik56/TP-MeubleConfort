@@ -3,8 +3,9 @@
     <div class="card-body">
       <h5 class="card-title">{{ titre }}</h5>
       <img  class="imgProduct" :src="require(`../assets/Categories/${url}`)" :alt="titre">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <router-link class="btn btn-primary" :to="link">Aller voir </router-link>
+      <p v-if="description" class=" description_categorie card-text">{{ description }}</p>
+      <router-link class="btn btn-primary buttonCard" :to="link">Aller voir </router-link>
+      <p v-if="prix" class="card-text">{{prix}} €</p>
     </div>
   </div>
 </template>
@@ -15,7 +16,9 @@ export default {
   props: [
     'titre',
     'url',
-    'link'
+    'link',
+      'prix',
+      'description'
 
   ]
 }
@@ -26,3 +29,47 @@ export default {
 
 
 </script>
+
+<style >
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+p, h5{
+  font-family: Montserrat;
+}
+
+.description_categorie{
+  font-size: 14px;
+  margin: 7%;
+  height: 95px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 420px;
+  transition-property: box-shadow;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+
+  box-shadow:  0 0 5px #41b883;
+}
+
+.card:hover {
+  box-shadow: 0 0 6px 7px #2fa56b;
+}
+
+
+.card-body:hover{
+  background: #242424;
+  color: #fff;
+}
+
+.buttonCard{
+  margin: 8% 0 0 0;
+}
+
+
+
+</style>

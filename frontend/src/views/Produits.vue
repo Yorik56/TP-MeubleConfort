@@ -1,11 +1,9 @@
 <template>
   <div class="container">
     <div class="row">
-    </div>
-    <div class="row">
       <div class="col-3" v-for="data in produits"  :key="data.id">
         <card
-            :url= "nomCategorie + '/Sous_Catégories/' + nomSousCategorie + '/Produits/' + data.image"
+            :url= "nameCat[0].titre_systeme + '/Sous_Catégories/' + nomSousCategorie[0].titreSysteme + '/Produits/' + data.image"
             :titre= "data.titre"
             :link= "{ name: 'produit', params: { idProduct: data.id }}"
         />
@@ -24,11 +22,9 @@ export default {
     return{
       myJson: json,
       id:0,
-      nomCategorie:"",
+      nameCat:"",
       nomSousCategorie:"",
       idProducts: 0,
-      sousCat: [],
-      products: [],
       produits: ""
     }
   },
@@ -39,12 +35,11 @@ export default {
     this.id = parseInt(this.$route.params.idC);
     this.idProducts = parseInt(this.$route.params.idProducts);
     // console.log(this.$route.params);
-    this.getProduits();
   },
   async mounted() {
     Categorie_service.getAllProducts(this.idProducts)
         .then((response) => {
-          console.log(response)
+          // console.log(response)
           this.produits = response
         })
         .catch((error) => {
@@ -54,20 +49,22 @@ export default {
 
     Categorie_service.getNameSousCategorie(this.idProducts)
         .then((response) => {
-          this.nomSousCategorie = response[0].titre;
+          this.nomSousCategorie = response;
+        })
+        .catch((error) => {
+          this.loading = false
+          console.log(error.response)
+        })
+    Categorie_service.getNameCategorie(this.id)
+        .then((response) => {
+            console.log(response)
+            this.nameCat = response;
         })
         .catch((error) => {
           this.loading = false
           console.log(error.response)
         })
 
-  },
-  methods:{
-    getProduits(){
-      this.nomCategorie = this.myJson.find(myJson => myJson.id === this.id).titre;
-      this.sousCat = this.myJson.find(myJson => myJson.id === this.id).sousCategories;
-      this.products = this.sousCat.find(sousCat => sousCat.id === this.idProducts).produits;
-    }
   }
 }
 </script>

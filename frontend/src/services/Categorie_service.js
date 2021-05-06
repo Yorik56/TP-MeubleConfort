@@ -54,6 +54,12 @@ class Categorie_service {
         });
         return response.data;
     }
+    async Sauvegarde(form) {
+        console.log(form)
+        let response = await this.axios.post('/inscription/', form)
+        return response.data
+    }
+
 
 
 }

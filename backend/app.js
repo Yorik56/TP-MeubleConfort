@@ -3,7 +3,7 @@ const database = require('./db')
 const cors = require('cors')
 
 const app = express()
-
+app.use(express.json())
 var corsOptions = {
   origin: "http://localhost:8080"
 }
@@ -93,6 +93,21 @@ app.get('/product/:id', (req, res) => {
 app.get('/addProduct/:id', (req, res) => {
     const id = req.params.id;
     database.query('INSERT INTO panier(idProduit,titre) SELECT id,titre FROM produit WHERE id =' + id, (err, result) => {
+        if (err) throw err;
+        const categories = JSON.stringify(result);
+        return res.end(categories, function (err){
+            if (err) throw err;
+        })
+    })
+})
+
+// PUT Product By Id
+app.post('/inscription/', (req, res) => {
+    console.log("recu");
+    console.log(req.body);
+
+    // const id = req.params.id;
+    database.query('INSERT into user SET ?' , req.body , (err, result) => {
         if (err) throw err;
         const categories = JSON.stringify(result);
         return res.end(categories, function (err){

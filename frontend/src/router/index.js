@@ -43,6 +43,11 @@ const routes = [
     name: 'panier',
     component: () => import(/* webpackChunkName: "about" */ '../views/Panier.vue')
   },
+  {
+    path: '/inscription',
+    name: 'inscription',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Inscription.vue')
+  },
 
 ]
 

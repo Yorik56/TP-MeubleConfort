@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">{{ titre }}</h5>
-      <img  class="imgProduct" :src="require(`../assets/Categories/${url}`)" :alt="titre">
+      <img v-if="url"  class="imgProduct" :src="require(`../assets/Categories/${url}`)" :alt="titre">
       <p v-if="description" class=" description_categorie card-text">{{ description }}</p>
       <router-link class="btn btn-primary buttonCard" :to="link">Aller voir </router-link>
       <p v-if="prix" class="card-text">{{prix}} €</p>

@@ -57,8 +57,8 @@ export default {
         })
     Categorie_service.getNameCategorie(this.id)
         .then((response) => {
-            console.log(response)
-            this.nameCat = response;
+          console.log(response)
+          this.nameCat = response;
         })
         .catch((error) => {
           this.loading = false

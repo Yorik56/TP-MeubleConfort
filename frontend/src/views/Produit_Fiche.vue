@@ -86,7 +86,7 @@ export default {
           this.loading = false
           console.log(error.response)
         })
-    Categorie_service.getProduct(this.id)
+    Categorie_service.getProduct(this.idProduct)
         .then((response) => {
           console.log(response)
           this.product = response;

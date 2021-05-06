@@ -89,4 +89,16 @@ app.get('/product/:id', (req, res) => {
     })
 })
 
+// PUT Product By Id
+app.get('/addProduct/:id', (req, res) => {
+    const id = req.params.id;
+    database.query('INSERT INTO panier(idProduit,titre) SELECT id,titre FROM produit WHERE id =' + id, (err, result) => {
+        if (err) throw err;
+        const categories = JSON.stringify(result);
+        return res.end(categories, function (err){
+            if (err) throw err;
+        })
+    })
+})
+
 module.exports = app

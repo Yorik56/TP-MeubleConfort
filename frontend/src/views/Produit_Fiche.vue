@@ -8,8 +8,9 @@
         <card
             :url= "nameCat[0].titre_systeme + '/Sous_Catégories/' + nomSousCategorie[0].titreSysteme + '/Produits/' + product[0].image"
             :titre= "product[0].titre"
-            :link= "null"
+            :link="null"
             :prix="product[0].prix"
+            :idProductAdd="product[0].id"
         />
       </div>
       <div class="col-9 attributsDiv">
@@ -56,7 +57,6 @@ export default {
     this.id = parseInt(this.$route.params.idC);
     this.idProducts = parseInt(this.$route.params.idProducts);
     this.idProduct = parseInt(this.$route.params.idProduct);
-    this.getProduit();
   },
   async mounted() {
     Categorie_service.getAllProducts(this.idProducts)
@@ -98,11 +98,18 @@ export default {
 
   },
   methods:{
-    getProduit(){
-      // this.sousCat = this.myJson.find(myJson => myJson.id === this.id).sousCategories;
-      // this.products = this.sousCat.find(sousCat => sousCat.id === this.idProducts).produits;
-      // this.product = this.products.find(products => products.id === this.idProduct);
-    }
+    // addProduct(v){
+    //   console.log('ici');
+    //   Categorie_service.addProduct(v)
+    //       .then((response) => {
+    //         console.log(response)
+    //         this.categories = response
+    //       })
+    //       .catch((error) => {
+    //         this.loading = false
+    //         console.log(error.response)
+    //       })
+    // }
   }
 }
 

@@ -6,11 +6,14 @@
       <p v-if="description" class=" description_categorie card-text">{{ description }}</p>
       <router-link class="btn btn-primary buttonCard" :to="link">Aller voir </router-link>
       <p v-if="prix" class="card-text">{{prix}} €</p>
+      <button v-if="idProductAdd" :click="addProduct(idProductAdd)">  Activer les lasers
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import Categorie_service from "../services/Categorie_service";
 export default {
   name: "card",
   props: [
@@ -18,9 +21,24 @@ export default {
     'url',
     'link',
       'prix',
-      'description'
+      'description',
+      'idProductAdd'
 
-  ]
+  ],
+  methods: {
+    addProduct(v){
+      console.log('ici');
+      Categorie_service.addProduct(v)
+          .then((response) => {
+            console.log(response)
+            this.categories = response
+          })
+          .catch((error) => {
+            this.loading = false
+            console.log(error.response)
+          })
+    }
+  }
 }
 
 

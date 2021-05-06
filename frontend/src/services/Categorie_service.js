@@ -48,6 +48,13 @@ class Categorie_service {
         return response.data;
     }
 
+    async addProduct(id){
+        let response = await this.axios.get("/addProduct/" + id, {
+
+        });
+        return response.data;
+    }
+
 
 }
 export default new Categorie_service()

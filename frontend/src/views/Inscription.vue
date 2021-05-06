@@ -104,8 +104,8 @@ export default {
           this.form.ville != null &&
           this.form.pays != null &&
           this.form.rue != null &&
-          (this.form.cp.length) === 5 &&
-          this.form.cp.isInteger()
+          (this.form.cp.length) === 5
+          // this.form.cp.isInteger()
       )
       {
         Categorie_service.Sauvegarde(this.form).then((response) => {
@@ -122,9 +122,11 @@ export default {
       } else {
         if((this.form.cp.length) !== 5){
           alert('Le Code postal doit contenir 5 chiffres')
-        } else if(!this.form.cp.isInteger()){
-          alert('Le Code postal doit être un entier')
-        } else {
+        }
+        // else if(!this.form.cp.isInteger()){
+        //   alert('Le Code postal doit être un entier')
+        // }
+        else {
           alert('Le formulaire n\'est pas correctement remplis')
         }
 
